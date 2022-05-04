@@ -9,9 +9,9 @@ This is the first task of *project 2*. We use Resnet-18 to do classfication on C
 
 *test.py*: Test the accuracy of our trained net, while inspecting some misclassified images.
 
-*record/*: Loss and accuracy curves.
+*record*: Loss and accuracy curves.
 
-*net.pth*: The trained net.
+*net.pth*: The trained net (that performs the best on the validation dataset).
 
 # Usage
 For each of the four training modes (none, cutout, mixup and cutmix), we try three different learning rates 0.0007, 0.001 and 0.0012. Use commands to set the trainig mode.
