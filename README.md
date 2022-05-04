@@ -11,9 +11,13 @@ This is the first task of *project 2*. We use Resnet-18 to do classfication on C
 # Usage
 For each of the four training modes (none, cutout, mixup and cutmix), we try three different learning rates 0.0007, 0.001 and 0.0012. Use commands to set the trainig mode.
 
-> python train.py  (same as python train.py none)
-> python train.py cutout
-> python train.py cutmix
-> python train.py mixu
+python train.py  (same as python train.py none)
 
+python train.py cutout
+
+python train.py cutmix
+
+python train.py mixup
+
+Modify train.py if you're going to change the hyper parameters (LR,EPOCH and etc).
 
