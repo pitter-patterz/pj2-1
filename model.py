@@ -1,9 +1,5 @@
 
-
-"""
-Reference: https://github.com/samcw/ResNet18-Pytorch
-
-"""
+# Reference: https://github.com/samcw/ResNet18-Pytorch
 
 import torch
 import torch.nn as nn
