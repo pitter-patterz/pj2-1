@@ -14,6 +14,6 @@ For each of the four training modes (none, cutout, mixup and cutmix), we try thr
 > python train.py  (same as python train.py none)
 > python train.py cutout
 > python train.py cutmix
-> python train.py mixup
+> python train.py mixu
 
 
