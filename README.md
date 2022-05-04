@@ -5,7 +5,7 @@ This is the first task of *project 2*. We use Resnet-18 to do classfication on C
 
 *data_augmentation.py*: Mixup and cutmix. Note that cutout is realised via transforms.RandomCrop().
 
-*train.py**: Train a Resnet-18 within 10 epochs.
+*train.py*: Train a Resnet-18 within 10 epochs.
 
 *test.py*: Test the accuracy of our trained net, while inspecting some misclassified images.
 
