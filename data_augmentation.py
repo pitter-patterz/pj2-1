@@ -1,8 +1,8 @@
 
 
 """
-Cutmix and mixup. We use torchvision.tranforms.randomcrop() to do cutout.
-
+Define the functions of cutmix and mixup. 
+We use torchvision.tranforms.randomcrop() to do cutout.
 """
 
 import torch
