@@ -11,7 +11,7 @@ This is the first task of *project 2*. We use Resnet-18 to do classfication on C
 
 *record*: Loss and accuracy curves.
 
-The four trained nets (with the optimal learning rate) can be downloaded from https://pan.baidu.com/s/166vi_WS9kzX6bH3SRsbP4Q?pwd=sjwl (pwd：sjwl).
+The four trained nets (each with the optimal learning rate) can be downloaded from https://pan.baidu.com/s/166vi_WS9kzX6bH3SRsbP4Q?pwd=sjwl (pwd：sjwl).
 
 # Usage
 For each of the four training modes (none, cutout, mixup and cutmix), we try three different learning rates 0.0007, 0.001 and 0.0012. Use commands to set the trainig mode.
