@@ -24,7 +24,7 @@ def mixup(inputs,labels,max_lam=0.15):
     return new_inputs,new_labels
 
 
-def randcut(x=32,y=32,rate=0.15):
+def randcut(x=32,y=32,rate=0.4):
     lx,ly = int(x*rate),int(y*rate)
     midx,midy = np.random.randint(x),np.random.randint(y)
     
@@ -36,7 +36,7 @@ def randcut(x=32,y=32,rate=0.15):
     return x1,x2,y1,y2
 
 
-def cutmix(inputs,labels,rate=0.15):
+def cutmix(inputs,labels,rate=0.4):
     
     n = inputs.shape[0]
     indices = torch.randperm(n)
