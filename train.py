@@ -23,12 +23,10 @@ if m not in methods:
     m = 'none'
 print('\nThe method being applied:',m,'\n')
 
-
 # hyper parameters
 
 EPOCH = 10
 BATCH_SIZE = 128
-LR = 10e-4
 
 # load and preprocess the dataset
 
@@ -46,20 +44,22 @@ transform_test = transforms.Compose([
     transforms.ToTensor()
 ])
 
-trainset = torchvision.datasets.CIFAR100(root='dataset', train=True, download=False, transform=transform_train)
+trainset = torchvision.datasets.CIFAR100(root='dataset100', train=True, download=False, transform=transform_train)
 
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
 
-testset = torchvision.datasets.CIFAR100(root='dataset', train=False, download=False, transform=transform_test)
+testset = torchvision.datasets.CIFAR100(root='dataset100', train=False, download=False, transform=transform_test)
 testloader = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=False, num_workers=0)
+
 # A half of the pictures in the testloader is used as valid data.
+
 
 # train a ResNet18
 net = ResNet18().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(net.parameters(), lr=LR, weight_decay=1e-5)
 
-# writer = SummaryWriter()
+# writer = SummaryWriter('record_'+m+str(LR))
 iteration = 0
 for epoch in range(EPOCH):
     print('\n*****Epoch:',epoch+1)
