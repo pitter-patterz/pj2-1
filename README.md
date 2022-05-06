@@ -1,5 +1,5 @@
 # Introduction
-This is the first task of *project 2*. We use Resnet-18 to do classfication on CIFAR images, and implemenet three methods of data augmentation, including cutout, mixup and cutmix. The model is referred to https://github.com/samcw/ResNet18-Pytorch.
+This is the first task of *project 2*. We use Resnet-18 to do classfication on CIFAR-100 images, and implemenet three methods of data augmentation, including cutout, mixup and cutmix. The model is referred to https://github.com/samcw/ResNet18-Pytorch.
 
 *model.py*: Define the structure of Resnet-18.
 
@@ -21,7 +21,7 @@ For each of the four training modes (none, cutout, mixup and cutmix), we try thr
 + python train.py cutmix
 + python train.py mixup
 
-Modify train.py if you're going to change the hyper parameters (LR,EPOCH and etc). Then we test the four models.
+Modify train.py if you're going to change the hyper parameters (LR,EPOCH and etc). Then we test the four models altogether.
 
 + python test.py
 
