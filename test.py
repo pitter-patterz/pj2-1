@@ -16,12 +16,10 @@ transform_test = transforms.Compose([
     transforms.ToTensor()
 ])
 
-testset = torchvision.datasets.CIFAR10(root='dataset', train=False, download=False, transform=transform_test)
+testset = torchvision.datasets.CIFAR100(root='dataset', train=False, download=False, transform=transform_test)
 testloader = torch.utils.data.DataLoader(testset, batch_size=10, shuffle=False, num_workers=2)
 
-classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 
 def test(model_name):
     
@@ -70,8 +68,8 @@ for model_name in ['none.pth','mixup.pth','cutmix.pth','cutout.pth']:
 #     plt.figure(dpi=300)
 #     plt.imshow(img)
     
-#     string = classes[label]+'(true)'
-#     string += '  '+classes[p_label]+'(false)'
+#     string = str[label]+'(true)'
+#     string += '  '+str(p_label)+'(false)'
     
 #     plt.xlabel(string)
     
