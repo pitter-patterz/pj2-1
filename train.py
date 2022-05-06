@@ -26,9 +26,9 @@ print('\nThe method being applied:',m,'\n')
 
 # hyper parameters
 
-EPOCH = 9
+EPOCH = 10
 BATCH_SIZE = 128
-LR = 12e-4
+LR = 10e-4
 
 # load and preprocess the dataset
 
@@ -46,18 +46,13 @@ transform_test = transforms.Compose([
     transforms.ToTensor()
 ])
 
-trainset = torchvision.datasets.CIFAR10(root='dataset', train=True, download=False, transform=transform_train)
+trainset = torchvision.datasets.CIFAR100(root='dataset', train=True, download=False, transform=transform_train)
 
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=0)
 
-testset = torchvision.datasets.CIFAR10(root='dataset', train=False, download=False, transform=transform_test)
+testset = torchvision.datasets.CIFAR100(root='dataset', train=False, download=False, transform=transform_test)
 testloader = torch.utils.data.DataLoader(testset, batch_size=100, shuffle=False, num_workers=0)
-
 # A half of the pictures in the testloader is used as valid data.
-
-# labels in CIFAR10
-classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
-
 
 # train a ResNet18
 net = ResNet18().to(device)
